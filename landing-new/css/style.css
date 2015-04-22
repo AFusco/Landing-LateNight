@@ -3180,6 +3180,10 @@
 		opacity: 1;
 	}
 
+    body.is-menu-visible #header.alt img{
+        opacity: 1;
+    }
+
 	body.is-menu-visible #page-wrapper {
 		opacity: 0.35;
 	}
@@ -3218,7 +3222,7 @@
 			-ms-transition: opacity 0.2s ease;
 			transition: opacity 0.2s ease;
 			height: inherit;
-			left: 4.5em; /* 1.25em */
+			left: 7.5em; /* 1.25em poi 4.5*/
 			line-height: inherit;
 			position: absolute;
 			top: 0;
@@ -3308,6 +3312,14 @@
 		}
 
 			#header.alt h1 {
+				-moz-pointer-events: none;
+				-webkit-pointer-events: none;
+				-ms-pointer-events: none;
+				pointer-events: none;
+				opacity: 0;
+			}
+
+			#header.alt img {
 				-moz-pointer-events: none;
 				-webkit-pointer-events: none;
 				-ms-pointer-events: none;
@@ -3740,6 +3752,11 @@
     .header-left {                  /* TODO: sistemare questi due css, non possono essere così semplici */
         position: absolute;
     }
+
+	.header-left img {
+		position: fixed;
+		left: 4.5em;
+	}
 
     .header-right {
         float: right;
